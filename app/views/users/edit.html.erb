@@ -1,5 +1,6 @@
 <% provide(:title, "Edit user") %>
 <h1>Update your profile</h1>
+<%= link_to "Reset Password", "shared/resetPassword" %>
 
 <div class="row">
   <div class="span6 offset3">
@@ -12,11 +13,16 @@
       <%= f.label :email %>
       <%= f.text_field :email %>
 
-      <%= f.label :password %>
-      <%= f.password_field :password %>
+     
 
-      <%= f.label :password_confirmation, "Confirm Password" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.label :weight %>
+      <%= f.text_field :weight %>
+
+      <%= f.label :height %>
+      <%= f.text_field :height %>
+
+      <%= f.label :gym, "Home Gym" %>
+      <%= f.text_field :gym %>
 
       <%= f.submit "Save changes", class: "btn btn-large btn-primary" %>
     <% end %>

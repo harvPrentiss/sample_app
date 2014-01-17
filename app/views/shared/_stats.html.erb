@@ -13,3 +13,16 @@
     followers
   </a>
 </div>
+<br>
+<h1>Statistics</h1>
+<div class="stats">
+    Weight: <%= @user.weight %> pounds 
+    <br>
+    Height: <%= @user.height %> inches
+    <br>
+    Home Gym: <%= @user.gym %>
+    <br>
+    <% if current_user?(@user) %>
+      <%= link_to "Edit", edit_user_path(current_user) %>
+    <% end %>
+</div>
